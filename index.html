@@ -2,59 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T4JAN | File Repository</title>
+    <title>FitFiles | File Repository</title>
     <style>
-        body { font-family: monospace; background-color: #1a1a1a; color: #00ff00; padding: 20px; }
-        header { text-align: center; border-bottom: 2px solid #00ff00; padding-bottom: 20px; margin-bottom: 20px; }
-        .search-bar { width: 100%; padding: 10px; background: #000; border: 1px solid #00ff00; color: #00ff00; margin-bottom: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        th { text-align: left; border-bottom: 1px solid #444; padding: 10px; }
-        td { padding: 10px; border-bottom: 1px dotted #333; }
-        a { color: #00ff00; text-decoration: none; font-weight: bold; }
-        a:hover { background: #00ff00; color: #000; }
-        .tag { color: #ff00ff; font-size: 0.8em; }
+        body { font-family: 'Courier New', monospace; background: #0d0d0d; color: #00ff41; padding: 20px; }
+        .container { max-width: 900px; margin: auto; border: 1px solid #333; padding: 20px; background: #111; }
+        header { text-align: center; border-bottom: 2px solid #00ff41; margin-bottom: 20px; }
+        .upload-section { background: #222; padding: 15px; border: 1px dashed #00ff41; text-align: center; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { border-bottom: 1px solid #00ff41; text-align: left; padding: 10px; }
+        td { padding: 10px; border-bottom: 1px solid #222; }
+        a { color: #ff00ff; text-decoration: none; }
+        a:hover { text-decoration: underline; background: #00ff41; color: #000; }
+        .btn { background: #00ff41; color: #000; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>[ T4JAN ]</h1>
-    <p>Secure File Index & Distribution</p>
-</header>
+<div class="container">
+    <header>
+        <h1>[ FitFiles ]</h1>
+        <p>DECENTRALIZED FILE INDEX</p>
+    </header>
 
-<input type="text" class="search-bar" placeholder="Search the repository...">
+    <div class="upload-section">
+        <h3>CONTRIBUTE TO T4JAN Team</h3>
+        <input type="hidden" role="uploadcare-uploader" name="my_file" />
+    </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Name</th>
-            <th>Size</th>
-            <th>Uploader</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="tag">[APPS]</td>
-            <td><a href="#">System_Optimizer.exe</a></td>
-            <td>14.2 MB</td>
-            <td>Admin</td>
-        </tr>
-        <tr>
-            <td class="tag">[DOCS]</td>
-            <td><a href="#">Network_Security_Guide.pdf</a></td>
-            <td>2.1 MB</td>
-            <td>Mod_X</td>
-        </tr>
-        <tr>
-            <td class="tag">[TOOLS]</td>
-            <td><a href="#">File_Encrypter.zip</a></td>
-            <td>5.5 MB</td>
-            <td>T4_Dev</td>
-        </tr>
-    </tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>File Name</th>
+                <th>Status</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[EXE]</td>
+                <td>System_Patch_v2.exe</td>
+                <td><span style="color:yellow">Checked</span></td>
+                <td><a href="#">DOWNLOAD</a></td>
+            </tr>
+            <tr>
+                <td>[ZIP]</td>
+                <td>Database_Dump.zip</td>
+                <td><span style="color:lightgreen">Verified</span></td>
+                <td><a href="#">DOWNLOAD</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+<script>
+  UPLOADCARE_PUBLIC_KEY = 'demopublickey'; // Replace with your own key from uploadcare.com
+</script>
 
 </body>
 </html>
